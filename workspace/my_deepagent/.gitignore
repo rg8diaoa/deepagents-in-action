@@ -1,0 +1,8 @@
+# 密钥永不入库；.venv 可由 uv sync 重建
+.env
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+# 无 package.json 的孤儿 lock（npm ENOENT 实测产物，保留在本地作证据）
+frontend/package-lock.json
