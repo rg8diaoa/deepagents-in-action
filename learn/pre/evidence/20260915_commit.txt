@@ -1,0 +1,21 @@
+# 证据：Task 0 准备阶段工作提交
+日期: 2026-09-15 | 操作: git add AGENTS.md learn/ && git commit（AI 执行，本人指令"做完记得提交"）
+说明: 本证据 txt/PNG 经 git commit --amend --no-edit 并入同一提交（提交信息不变）。
+      png 未被上游 .gitignore 忽略（check-ignore exit 1 = 不忽略），随库保存。
+
+--- 提交信息 ---
+docs: 初始化 learn/ 学习容器与 AGENTS.md 协作规则（Task 0 准备篇）
+
+环境探测与 AgentSeek CLI 安装（含 trampoline 0xC0000135 坑定位与绕过封装）；
+Task0 操作手册与过程证据（txt/PNG）落盘
+
+--- git commit 输出 ---
+[main 1df09d4] docs: 初始化 learn/ 学习容器与 AGENTS.md 协作规则（Task 0 准备篇）
+ 15 files changed, 416 insertions(+)
+ 清单: AGENTS.md / learn/README.md / learn/HANDOFF.md
+       learn/infra/agentseek.ps1 / learn/infra/render_evidence.ps1
+       learn/pre/evidence/ 4 组 txt+png
+       learn/pre/notes/guides/Task0操作手册.md
+       learn/pre/notes/research/.gitkeep
+--- 身份 ---
+user.name = rg8diaoa（git config）

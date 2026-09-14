@@ -1,0 +1,26 @@
+# 证据：Step 0 — 克隆 fork 到本地
+日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+命令: git clone https://github.com/rg8diaoa/deepagents-in-action.git .
+结论: 成功（exit 0；remote 指向本人 fork；根目录无同名冲突文件）
+说明: 输出开头的红色 NativeCommandError 只是 git 把进度信息写往 stderr、
+      PowerShell 对 stderr 的例行标红，克隆本身成功。
+
+--- 原始输出 ---
+git : Cloning into '.'...
+所在位置 行:15 字符: 2347
++ ... M = 'dumb'; git clone https://github.com/rg8diaoa/deepagents-in-actio ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Cloning into '.'...:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+--- remote ---
+origin	https://github.com/rg8diaoa/deepagents-in-action.git (fetch)
+origin	https://github.com/rg8diaoa/deepagents-in-action.git (push)
+--- log ---
+0279612 docs: 澄清记忆文件读写与 Skills 加载机制 (#112)
+01d336f chore: optimize assets
+5aad78f docs: streamline README and refresh 2,000-star banner (#110)
+--- root checks ---
+AGENTS.md exists: False
+learn exists: False
+workspace exists: False

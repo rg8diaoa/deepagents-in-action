@@ -1,0 +1,26 @@
+# 证据：Step 3 — 环境探测
+日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+命令: git/node/python/py/npm/uv 逐项 --version
+结论: 达标。git 2.53.0.2 / Python 3.12.10 / Node v24.14.1 / npm 11.11.0 / uv 0.12.13
+坑位: py 启动器损坏（指向不存在的 world-simulator Python 3.14），不影响课程，用 python 代替。
+
+--- 原始输出 ---
+=== git ===
+git version 2.53.0.windows.2
+=== python ===
+Python 3.12.10
+=== py ===
+py : Unable to create process using 'C:\Users\Administrator\world-simulator\Python\pythoncore-3.14-64\python.exe --vers
+ion': ???????????
+所在位置 行:15 字符: 2437
++ ...  ==="; python --version 2>&1; py --version 2>&1; ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Unable to creat...n': ???????????:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+
+=== node ===
+v24.14.1
+=== npm ===
+11.11.0
+=== uv ===
+uv 0.12.13 (0ebbd9274 2026-09-10 x86_64-pc-windows-msvc)

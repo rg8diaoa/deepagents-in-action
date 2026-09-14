@@ -1,0 +1,31 @@
+# 证据：Step 1 + Step 2 — learn/ 骨架与 AGENTS.md 草案落盘
+日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+命令: Get-ChildItem -Recurse learn / git status --short / git diff origin/main --name-status
+结论: 骨架完整；git 状态仅新增（?? AGENTS.md、?? learn/）；上游零修改（diff 为空）✅
+说明: AGENTS.md 为 AI 起草草案，待本人审定；learn/pre/notes/{guides,research} 留空
+      由本人撰写（观点不代写，见 AGENTS.md 分工边界）。
+
+--- 原始输出 ---
+=== learn/ tree ===
+learn\infra
+learn\pre
+learn\HANDOFF.md
+learn\README.md
+learn\infra\agentseek.ps1
+learn\infra\render_evidence.ps1
+learn\pre\evidence
+learn\pre\notes
+learn\pre\evidence\20260915_step0_clone.txt
+learn\pre\evidence\20260915_step3_env_check.txt
+learn\pre\evidence\20260915_step4_agentseek_install.txt
+learn\pre\notes\guides
+learn\pre\notes\research
+learn\pre\notes\guides\.gitkeep
+learn\pre\notes\research\.gitkeep
+=== root additions ===
+AGENTS.md
+=== git status --short ===
+?? AGENTS.md
+?? learn/
+=== fidelity check: git diff origin/main --name-status (expect empty) ===
+fidelity exit: 0
