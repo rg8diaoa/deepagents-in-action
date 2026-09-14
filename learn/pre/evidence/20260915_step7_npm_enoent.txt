@@ -1,0 +1,31 @@
+# 证据：Step 7 — npm ENOENT 与模板差异定位（本人实测 + AI 复核）
+日期: 2026-09-15 | 环境: 本人 PowerShell（TRAE 沙箱外）| 执行: 本人
+命令: npm install ---prefix frontend
+结论: 失败属预期——deepagents/default 模板无前端（项目 README 原话
+      "This template is intentionally minimal and does not include a frontend"），
+      npm 步骤对该模板应跳过。
+附带: 命令误敲为 ---prefix（三横线），npm 本次容忍且 prefix 仍生效
+      （报错路径含 \frontend\ 证明）；标准写法是 --prefix（两横线）。
+
+--- 原始输出（本人终端粘贴） ---
+PS E:\Documents\deepagenrs-in-action\workspace\my_deepagent> npm install ---prefix frontend
+npm error code ENOENT
+npm error syscall open
+npm error path E:\Documents\deepagenrs-in-action\workspace\my_deepagent\frontend\package.json
+npm error errno -4058
+npm error enoent Could not read package.json: Error: ENOENT: no such file or directory, open 'E:\Documents\deepagenrs-in-action\workspace\my_deepagent\frontend\package.json'
+npm error enoent This is related to npm not being able to find a file.
+npm error A complete log of this run can be found in:
+C:\Users\Administrator\AppData\Local\npm-cache\_logs\2026-09-14T17_43_58_233Z-debug-0.log
+
+--- 定位依据（AI 复核文件） ---
+- workspace\my_deepagent\README.md: "does not include a frontend"；启动用 agentseek dev
+- 项目根无 frontend\ 目录、无 langgraph.json
+- .agentseek/lifecycle.toml: gateway = uv run bub gateway --enable-channel ag-ui，
+  服务 http://127.0.0.1:18088/agent，健康检查 /agent/health
+- .venv 已由 uv sync 装好（agentseek_langchain / bub / ag_ui_protocol 等）
+
+--- 动作 ---
+- Step 7 仅需 uv sync（已完成）；手册删除 npm 步骤并登记 drift
+- 启动验证 = agentseek dev + 浏览器开 /agent/health
+- .env 按模板变量填写：BUB_MODEL / BUB_API_KEY / BUB_API_BASE

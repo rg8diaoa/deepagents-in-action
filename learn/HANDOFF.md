@@ -15,7 +15,7 @@
 | fork + clone | ✅ | origin → rg8diaoa/deepagents-in-action |
 | learn/ 骨架 + AGENTS.md | ✅ | AGENTS.md 已本人审定生效；剩余步骤对照 learn/pre/notes/guides/Task0操作手册.md |
 | 环境探测 | ✅ | 见 AGENTS.md §3（python 3.12.10 / node v24.14.1 / uv 0.12.13） |
-| AgentSeek 安装 | ⚠️ | 0.1.4 已装；exe 在沙箱内启动失败（0xC0000135），用 `learn/infra/agentseek.ps1` 绕过；本人终端待验证 |
+| AgentSeek 安装 | ✅ | 0.1.4 已装；本人终端验证正常；0xC0000135 坑仅限沙箱内（沙箱内用 `learn/infra/agentseek.ps1` 绕过） |
 | Step 5-11（模板创建→跑通→技能） | ⏳ | **本人动手**：`agentseek create deepagents/default --checkout main --no-input` |
 
 ## 必读（按序）
@@ -34,7 +34,7 @@
 
 ## 状态快照
 
-- Task 0 🔄（截止 2026-09-15 03:00）｜ 环境就绪 ｜ AgentSeek 0.1.4 已装（exe 坑已绕过）｜ 模板项目未创建
+- Task 0 ✅ 核心完成（2026-09-15，Step 0-10）：doctor 全绿 + my_deepagent 网关 health 200 双确认 + npx skills 双技能装妥；Step 11 学习心得待本人撰写
 - 证据：`learn/pre/evidence/20260915_*.txt/png`（clone / env / agentseek / 骨架四组，成败均有）
 
 ## 更新约定

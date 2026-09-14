@@ -32,7 +32,7 @@
 - AgentSeek CLI：`uv tool install --upgrade agentseek` 安装成功（`agentseek==0.1.4`，93 个依赖包）。
   - **坑**：`agentseek.exe`（uv trampoline 启动器）本机启动即报 `0xC0000135`（DLL 未找到），复制到任意目录（含 %TEMP%）均复现；对照组：复制 `uv.exe` 为新文件可正常运行 → 排除"沙箱拦截新 exe"，是 trampoline 启动器本身的问题。
   - **可用绕过**（已验证 exit 0）：`& "$env:APPDATA\uv\tools\agentseek\Scripts\python.exe" -m agentseek <args>`，或用本仓库封装 [learn/infra/agentseek.ps1](learn/infra/agentseek.ps1)。
-  - 待办：在 TRAE 沙箱外的本人终端里验证 `agentseek version` 是否正常（若正常则坑仅限沙箱内）。
+  - 已验证（2026-09-15）：本人终端（沙箱外）`agentseek version` 正常（v0.1.4）→ 该坑仅存在于 TRAE 沙箱内，本机环境与 exe 本身无恙。
 - uv 写工作区外缓存正常（2026-09-15 安装全程无 os error 5），环境结论一律以本仓实测为准。
 
 ## 4. 规则指针

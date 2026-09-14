@@ -1,0 +1,26 @@
+# 证据：Step 10 — agentseek skills 命令移除，改用上游 npx skills
+日期: 2026-09-15 02:2x | 环境: 本人 PowerShell + AI 沙箱复核 | 执行: 本人
+命令: agentseek skills list / agentseek skills add --skill langchain-dev-guide -g
+结论: agentseek 0.1.4 已移除 skills 命令（pre02 是 0.0.3 时代文档）；改用课程 README
+      的上游写法 npx skills add ob-labs/agentseek --skill <名称>。
+
+--- 原始输出（本人终端粘贴） ---
+PS E:\Documents\deepagenrs-in-action\workspace\my_deepagent> agentseek skills list
+Usage: agentseek [OPTIONS] COMMAND [ARGS]...
+╭─ Error ────────────────────────────────────────────────────────────────╮
+│ No such command 'skills'.                                              │
+╰────────────────────────────────────────────────────────────────────────╯
+
+--- AI 沙箱复核：agentseek --help（v0.1.4 实际命令表） ---
+┌─ Commands ─────────────────────────────────────────────────────────────┐
+│ version  Show version information.                                      │
+├─ Project ───────────────────────────────────────────────────────────────┤
+│ dev / info / doctor / task / create                                    │
+└─────────────────────────────────────────────────────────────────────────┘
+（对比 pre01 文档的 0.0.3：run/build/deploy/api/ctx/skills 均已不在）
+
+--- 动作 ---
+- Step 10 改用课程 README 写法（手册已更新）：
+  npx skills add ob-labs/agentseek --skill langchain-dev-guide
+  npx skills add ob-labs/agentseek --skill langsmith-trace
+- drift 已登记 Task0操作手册.md 坑位表
