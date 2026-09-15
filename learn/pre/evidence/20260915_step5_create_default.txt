@@ -1,0 +1,14 @@
+# 证据（转录）：Step 5 — 创建模板项目
+日期: 2026-09-15 01:26 | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step5_create_default.png](../assets/20260915_step5_create_default.png)（原始件为屏幕影像，本 txt 为文本正典）
+结论: 成功——生成 my_deepagent
+
+--- 转录内容 ---
+PS E:\Documents\deepagenrs-in-action\workspace> agentseek create deepagents/default --checkout main --no-input
+Created my_deepagent
+
+Next (PowerShell):
+  Set-Location -LiteralPath 'my_deepagent'
+  agentseek info
+  agentseek task --list
+  agentseek doctor

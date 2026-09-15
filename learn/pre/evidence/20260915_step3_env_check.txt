@@ -1,5 +1,5 @@
 # 证据：Step 3 — 环境探测
-日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+日期: 2026-09-15 | 环境: Windows / Agent 沙箱 | 执行: AI 代办（本人委托）
 命令: git/node/python/py/npm/uv 逐项 --version
 结论: 达标。git 2.53.0.2 / Python 3.12.10 / Node v24.14.1 / npm 11.11.0 / uv 0.12.13
 坑位: py 启动器损坏（指向不存在的 world-simulator Python 3.14），不影响课程，用 python 代替。

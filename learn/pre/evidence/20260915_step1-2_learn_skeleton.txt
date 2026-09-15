@@ -1,5 +1,5 @@
 # 证据：Step 1 + Step 2 — learn/ 骨架与 AGENTS.md 草案落盘
-日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+日期: 2026-09-15 | 环境: Windows / Agent 沙箱 | 执行: AI 代办（本人委托）
 命令: Get-ChildItem -Recurse learn / git status --short / git diff origin/main --name-status
 结论: 骨架完整；git 状态仅新增（?? AGENTS.md、?? learn/）；上游零修改（diff 为空）✅
 说明: AGENTS.md 为 AI 起草草案，待本人审定；learn/pre/notes/{guides,research} 留空

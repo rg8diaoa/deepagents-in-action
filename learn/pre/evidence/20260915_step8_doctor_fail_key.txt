@@ -1,0 +1,18 @@
+# 证据（转录）：Step 8 — doctor 首跑拦截空 key
+日期: 2026-09-15 02:0x | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step8_doctor_fail_key.png](../assets/20260915_step8_doctor_fail_key.png)
+结论: 9 项检查 8 ok 1 fail——BUB_API_KEY not configured（坑 C3 现场）
+
+--- 转录内容 ---
+PS ...\workspace\my_deepagent> agentseek doctor
+ok   lifecycle.toml: Lifecycle spec is present.
+ok   uv: uv is available.
+ok   pyproject.toml: pyproject.toml is present.
+ok   src/my_deepagent/demo_binding.py: src/my_deepagent/demo_binding.py is present.
+ok   .env: .env is present.
+ok   BUB_MODEL: BUB_MODEL or AGENTSEEK_MODEL or DEEPAGENTS_MODEL is configured.
+fail BUB_API_KEY: BUB_API_KEY or AGENTSEEK_API_KEY or OPENAI_API_KEY is not configured.
+     next: Set BUB_API_KEY or AGENTSEEK_API_KEY or OPENAI_API_KEY in .env or the shell environment.
+ok   BUB_LANGCHAIN_SPEC: BUB_LANGCHAIN_SPEC or AGENTSEEK_LANGCHAIN_SPEC is configured.
+ok   BUB_AG_UI_PORT: BUB_AG_UI_PORT or AGENTSEEK_AG_UI_PORT is configured.
+ok   gateway cwd: . is present.

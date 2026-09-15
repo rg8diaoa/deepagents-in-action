@@ -1,0 +1,9 @@
+# 证据（转录）：Step 6 — .env 创建
+日期: 2026-09-15 01:28 | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step6_env_copy.png](../assets/20260915_step6_env_copy.png)
+结论: .env 由 .env.example 复制生成（资源管理器可见两者并存；.env 后续手工填 key，不入库）
+
+--- 转录内容 ---
+PS E:\Documents\deepagenrs-in-action\workspace> cd E:\Documents\deepagenrs-in-action\workspace\my_deepagent
+PS E:\Documents\deepagenrs-in-action\workspace\my_deepagent> Copy-Item .env.example .env
+（资源管理器 my_deepagent 目录：.agentseek / src / tests 文件夹；.env.example、Dockerfile、pyproject.toml、README.md、requirements.txt、.env）

@@ -2,15 +2,15 @@
 
 > 用途：本人人工执行剩余步骤时的对照手册。AI 代办部分已标注结果与证据索引。
 > 截止：**2026-09-15 03:00**（任务卡）。
-> 术语：「本人终端」= TRAE 之外的 PowerShell（已验证 `agentseek` 可直接用）；
-> 「沙箱内」= TRAE 会话里（exe 有 0xC0000135 坑，统一用 `learn\infra\agentseek.ps1` 封装）。
+> 术语：「本人终端」= Agent 之外的 PowerShell（已验证 `agentseek` 可直接用）；
+> 「沙箱内」= Agent 会话里（exe 有 0xC0000135 坑，统一用 `learn\infra\agentseek.ps1` 封装）。
 
 ## 状态总览
 
 | 步骤 | 内容 | 状态   | 证据 |
 |---|---|-----|---|
 | Step 0 | fork + clone | ✅ 2026-09-15   | `evidence/20260915_step0_clone.png` |
-| Step 1 | learn/ 骨架 | ✅ 2026-09-15   | `evidence/20260915_step12_learn_skeleton.png` |
+| Step 1 | learn/ 骨架 | ✅ 2026-09-15   | `evidence/20260915_step1-2_learn_skeleton.png` |
 | Step 2 | AGENTS.md 协作规则 | ✅ 已本人审定生效   | 同上 |
 | Step 3 | 环境探测 | ✅ 全达标   | `evidence/20260915_step3_env_check.png` |
 | Step 4 | AgentSeek 安装 | ✅（exe 坑仅限沙箱，本人终端已验证正常）   | `evidence/20260915_step4_agentseek_install.png` + `20260915_step4b_agentseek_own_terminal.png` |
@@ -82,11 +82,11 @@ agentseek dev            # 沙箱内: ..\learn\infra\agentseek.ps1 dev
 
 ## Step 9：验证跑通（打卡核心证据，截图自己截）
 
-**执行目录：无终端命令**（浏览器操作）；截图存 `learn/pre/notes/截图/`（你已建好）或 `learn/pre/evidence/`。
+**执行目录：无终端命令**（浏览器操作）；截图属过程影像，统一存 `learn/pre/notes/assets/`，命名 `20260915_stepN_slug.png`（产物文本由转录进 evidence/）。
 
 1. `agentseek dev` 运行时，浏览器开 `http://127.0.0.1:18088/agent/health` 确认网关健康（本模板无聊天前端，真实对话交互在 ch02 展开）；
 2. （可选，强烈推荐）.env 配好 LangSmith 后触发一次调用，到 LangSmith 网页看 Trace（调用链路 / 节点输入输出 / Token 用量）；
-3. 截图存 `learn/pre/notes/截图/`（建议命名 `20260915_step9_gateway_health.png`、`20260915_step9_langsmith.png`）。
+3. 截图存 `learn/pre/notes/assets/`（建议命名 `20260915_step9_gateway_health.png`、`20260915_step9_langsmith.png`；产物文本转录进 evidence/）。
 
 ## Step 10：安装开发技能
 

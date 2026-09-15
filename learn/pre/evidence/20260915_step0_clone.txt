@@ -1,5 +1,5 @@
 # 证据：Step 0 — 克隆 fork 到本地
-日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+日期: 2026-09-15 | 环境: Windows / Agent 沙箱 | 执行: AI 代办（本人委托）
 命令: git clone https://github.com/rg8diaoa/deepagents-in-action.git .
 结论: 成功（exit 0；remote 指向本人 fork；根目录无同名冲突文件）
 说明: 输出开头的红色 NativeCommandError 只是 git 把进度信息写往 stderr、

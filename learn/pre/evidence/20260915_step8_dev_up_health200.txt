@@ -1,0 +1,19 @@
+# 证据（转录）：Step 8 — agentseek dev 启动（404 与 200 同框）
+日期: 2026-09-15 02:13 | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step8_dev_up_health200.png](../assets/20260915_step8_dev_up_health200.png)
+结论: 网关启动成功；GET / 404（根路径无路由，属正常）与 GET /agent/health 200 OK 同框（坑 C2 现场）
+
+--- 转录内容（关键行） ---
+PS ...\workspace\my_deepagent> agentseek dev
+（doctor 10 项全 ok，略）
+Startup plan
+  Gateway: uv run bub gateway --enable-channel ag-ui
+  Gateway: http://127.0.0.1:18088/agent (runtime: ag-ui)
+$ 'C:\Users\Administrator\.local\bin\uv.EXE' run bub gateway --enable-channel ag-ui
+INFO:     Started server process [29260]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://127.0.0.1:18088 (Press CTRL+C to quit)
+2026-09-15 02:13:33.793 | INFO     | bub.channels.manager:listen_and_run:310 - channel.manager started listening
+INFO:     127.0.0.1:49558 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:52385 - "GET /agent/health HTTP/1.1" 200 OK

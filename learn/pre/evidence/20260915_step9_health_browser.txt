@@ -1,0 +1,8 @@
+# 证据（转录）：Step 9 — 本人浏览器访问 /agent/health
+日期: 2026-09-15 02:1x | 环境: 本人浏览器 | 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step9_health_browser.png](../assets/20260915_step9_health_browser.png)
+结论: HTTP 200，JSON body status=ok（与 AI 独立探测一致，双确认）
+
+--- 转录内容 ---
+地址栏: 127.0.0.1:18088/agent/health
+{"status":"ok","channel":"ag-ui","host":"127.0.0.1","port":18088,"path":"<PATH 环境变量回显，略>"}

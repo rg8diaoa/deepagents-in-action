@@ -1,7 +1,7 @@
 # AGENTS.md — 人机协作规则（学习期）
 
 > 状态：**已生效**（2026-09-15 起草，经本人审定）。
-> 对本仓库工作的任何 AI agent 生效（TRAE / Codex / Claude Code 等）。
+> 对本仓库工作的任何 AI agent 生效（Agent / Codex / Claude Code 等）。
 > 核心理念：学习 Deep Agents 要有自己的思想，课程实验本身必须本人完成；
 > 但使用 agent 本身也是一种能力，不涉及课程实验本身的准备工作可委托 AI 代办。
 
@@ -27,12 +27,12 @@
 
 ## 3. 环境备忘（2026-09-15 实测，供后续 agent 免踩坑）
 
-- Windows + TRAE 沙箱环境。git 2.53.0.2 ｜ Python 3.12.10 ｜ Node v24.14.1 ｜ npm 11.11.0 ｜ uv 0.12.13。
+- Windows + Agent 沙箱环境。git 2.53.0.2 ｜ Python 3.12.10 ｜ Node v24.14.1 ｜ npm 11.11.0 ｜ uv 0.12.13。
 - `py` 启动器损坏（指向不存在的 `C:\Users\Administrator\world-simulator\Python\pythoncore-3.14-64\python.exe`），统一用 `python` 命令即可。
 - AgentSeek CLI：`uv tool install --upgrade agentseek` 安装成功（`agentseek==0.1.4`，93 个依赖包）。
   - **坑**：`agentseek.exe`（uv trampoline 启动器）本机启动即报 `0xC0000135`（DLL 未找到），复制到任意目录（含 %TEMP%）均复现；对照组：复制 `uv.exe` 为新文件可正常运行 → 排除"沙箱拦截新 exe"，是 trampoline 启动器本身的问题。
   - **可用绕过**（已验证 exit 0）：`& "$env:APPDATA\uv\tools\agentseek\Scripts\python.exe" -m agentseek <args>`，或用本仓库封装 [learn/infra/agentseek.ps1](learn/infra/agentseek.ps1)。
-  - 已验证（2026-09-15）：本人终端（沙箱外）`agentseek version` 正常（v0.1.4）→ 该坑仅存在于 TRAE 沙箱内，本机环境与 exe 本身无恙。
+  - 已验证（2026-09-15）：本人终端（沙箱外）`agentseek version` 正常（v0.1.4）→ 该坑仅存在于 Agent 沙箱内，本机环境与 exe 本身无恙。
 - uv 写工作区外缓存正常（2026-09-15 安装全程无 os error 5），环境结论一律以本仓实测为准。
 
 ## 4. 规则指针
@@ -45,3 +45,10 @@
 
 - 本文件 = 跨工具协作宪法。
 - 实验进度 / 任务状态**不写进规则文件**——以 git log + `learn/HANDOFF.md` + 各章笔记为准（文档即记忆）。
+
+## 6. 证据与术语约定（2026-09-15 增补）
+
+1. **证据定义**：只有实验本身的产物记录才是证据——txt 为正典（可 grep/diff），AI 渲染 png 为忠实副本（可由 txt 重生成）；本人截图属**过程影像**，存 `learn/preN|chN/notes/assets/` 供笔记嵌图，不入 evidence/；无 txt 的步骤由截图转录补齐并标注转录来源。
+2. **术语**：本仓文档统一称「Agent / Agent 沙箱」，不出现具体产品名；引用沙箱原文报错串（如 TRAE Sandbox Error）可保留原样，但须加注说明。
+3. **跨仓前提核查**：采纳任何 Agent 或文档的建议前，先验证其引用的规则文件/脚本在本仓是否存在——结论绑定仓库约定，跨仓沿用必须重验前提。
+4. **权威源排序**（本人裁定）：实测验证 > 项目主文档 > 子目录文档。

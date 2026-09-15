@@ -1,0 +1,25 @@
+# 证据（转录）：Step 10 — npx skills 安装双技能
+日期: 2026-09-15 02:4x | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 assets/20260915_step10_npx_skills_ui.png、_langsmith_trace_installed.png、_langchain_guide_installed.png、_agents_skills_dir.png
+结论: 双技能均装至项目 .agents/skills/；安全评分 langchain-dev-guide=Snyk Low Risk、langsmith-trace=Snyk Med Risk
+
+--- 转录内容（关键行） ---
+PS ...\workspace\my_deepagent> npx skills add ob-labs/agentseek --skill langchain-dev-guide
+Need to install the following packages: skills@1.5.26
+Ok to proceed? (y) y
+Source: https://github.com/ob-labs/agentseek.git
+Repository cloned
+Found 4 skills
+Selected 1 skill: langchain-dev-guide
+79 agents —— Which agents do you want to install to?
+  ── Universal (.agents/skills) ── always included ──（Amp/Cline/Codex/Cursor/... 直接 Enter 确认默认）
+Installation scope: Project
+Installation Summary: .\agents\skills\langchain-dev-guide   copy → Amp, Cline, Codex, Cursor, Droid +7 more
+Security Risk Assessments: langchain-dev-guide  Gen Safe ｜ Socket 0 alerts ｜ Snyk Low Risk
+Installed 1 skill: ✓ langchain-dev-guide (copied) → .\agents\skills\langchain-dev-guide
+
+（langsmith-trace 同流程）
+Security Risk Assessments: langsmith-trace  Gen Safe ｜ Socket 0 alerts ｜ Snyk Med Risk
+Installed 1 skill: ✓ langsmith-trace (copied) → .\agents\skills\langsmith-trace
+
+（资源管理器复核）workspace\my_deepagent\.agents\skills\ → langchain-dev-guide、langsmith-trace 两目录（修改时间 2026/9/15 2:41 / 2:45）

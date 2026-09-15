@@ -1,0 +1,27 @@
+# 证据（转录）：Step 7 — uv sync
+日期: 2026-09-15 01:3x | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step7_uv_sync.png](../assets/20260915_step7_uv_sync.png)
+结论: 一次通过——Resolved 107 packages；关键行 deepagents==0.7.14（版本线佐证）
+
+--- 转录内容（关键行，中间依赖清单略） ---
+PS ...\workspace\my_deepagent> uv sync
+Using CPython 3.12.10 interpreter at: C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe
+Creating virtual environment at: .venv
+Updated https://github.com/ob-labs/agentseek.git (900f89518c32f8570d7648897394ed96a86a647a)
+Resolved 107 packages in 16.39s
+Built my-deepagent @ file:///E:/Documents/deepagenrs-in-action/workspace/my_deepagent
+Built agentseek-ag-ui @ git+https://github.com/ob-labs/agentseek.git#subdirectory=contrib/agentseek-ag-ui
+Built agentseek-langchain @ git+https://github.com/ob-labs/agentseek.git#subdirectory=contrib/agentseek-langchain
+Prepared 40 packages in 4.08s
+Installed 106 packages in 2.39s
+ + ag-ui-protocol==0.1.22
+ + agentseek-ag-ui==0.1.0 (from git+https://github.com/ob-labs/agentseek.git#...#subdirectory=contrib/agentseek-ag-ui)
+ + agentseek-langchain==0.1.0 (from git+https://github.com/ob-labs/agentseek.git#...#subdirectory=contrib/agentseek-langchain)
+ + aiohappyeyeballs==2.7.1
+ + anthropic==0.125.0
+ + any-llm-sdk==1.27.2
+ + authlib==1.8.0
+ + bub==0.3.9
+ + deepagents==0.7.14
+ + fastapi==0.141.1
+ + ...（中间略）

@@ -1,5 +1,5 @@
 # 证据：Step 7 — npm ENOENT 与模板差异定位（本人实测 + AI 复核）
-日期: 2026-09-15 | 环境: 本人 PowerShell（TRAE 沙箱外）| 执行: 本人
+日期: 2026-09-15 | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
 命令: npm install ---prefix frontend
 结论: 失败属预期——deepagents/default 模板无前端（项目 README 原话
       "This template is intentionally minimal and does not include a frontend"），

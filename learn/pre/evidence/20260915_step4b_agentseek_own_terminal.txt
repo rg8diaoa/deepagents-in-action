@@ -1,7 +1,7 @@
-# 证据：Step 4 补充 — 本人终端（TRAE 沙箱外）验证 agentseek
-日期: 2026-09-15 | 环境: 本人 PowerShell（TRAE 沙箱外）| 执行: 本人
+# 证据：Step 4 补充 — 本人终端（Agent 沙箱外）验证 agentseek
+日期: 2026-09-15 | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
 命令: agentseek version
-结论: 成功（AGENTSEEK v0.1.4）→ 0xC0000135 坑仅存在于 TRAE 沙箱内，
+结论: 成功（AGENTSEEK v0.1.4）→ 0xC0000135 坑仅存在于 Agent 沙箱内，
       exe 本身与本机环境正常。沙箱内继续用 learn/infra/agentseek.ps1 封装。
 
 --- 原始输出（本人终端粘贴） ---

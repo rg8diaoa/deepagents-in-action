@@ -1,5 +1,6 @@
 # 证据：Step 4 — AgentSeek CLI 安装与启动排障（成败全过程）
-日期: 2026-09-15 | 环境: Windows / TRAE 沙箱 | 执行: AI 代办（本人委托）
+日期: 2026-09-15 | 环境: Windows / Agent 沙箱 | 执行: AI 代办（本人委托）
+术语注: 下文引用的原始报错串『TRAE Sandbox Error』保留沙箱原文未改——TRAE 即本仓约定所称的 Agent 沙箱。
 命令: uv tool install --upgrade agentseek
 结论: 安装成功（agentseek==0.1.4，93 个依赖包，Installed 1 executable: agentseek）；
       但 agentseek.exe（uv trampoline 启动器）本机启动失败 0xC0000135（DLL 未找到）；

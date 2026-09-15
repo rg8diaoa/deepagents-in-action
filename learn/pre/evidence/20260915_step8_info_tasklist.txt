@@ -1,0 +1,33 @@
+# 证据（转录）：Step 8 — agentseek info / task --list / task sync
+日期: 2026-09-15 02:0x | 环境: 本人 PowerShell（Agent 沙箱外）| 执行: 本人
+来源: 转录自本人截图 [assets/20260915_step8_info_tasklist.png](../assets/20260915_step8_info_tasklist.png)
+结论: info 逐项列出 BUB_* 变量（当时 BUB_API_KEY / BUB_API_BASE 为 missing）；task --list 仅 sync 一个任务
+
+--- 转录内容 ---
+PS ...\workspace\my_deepagent> agentseek info
+Project
+  Root: E:\Documents\deepagenrs-in-action\workspace\my_deepagent
+  Name: My DeepAgent
+  Template: deepagents/default
+  Lifecycle: .agentseek\lifecycle.toml / version 2
+
+Entrypoints
+  Dev: agentseek dev
+  Gateway: http://127.0.0.1:18088/agent (runtime: ag-ui)
+
+Environment
+  Env file: .env (present)
+  BUB_MODEL: set (.env)
+  BUB_API_KEY: missing
+  BUB_API_BASE: missing
+  BUB_LANGCHAIN_SPEC: set (.env)
+  BUB_AG_UI_PORT: set (.env)
+
+Lifecycle Tasks
+  sync: Install Python dependencies.
+
+PS ...\workspace\my_deepagent> agentseek task --list
+  sync                  Install Python dependencies.
+PS ...\workspace\my_deepagent> agentseek task sync
+Resolved 107 packages in 1ms
+Checked 106 packages in 2ms

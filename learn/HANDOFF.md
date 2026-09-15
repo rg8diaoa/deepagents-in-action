@@ -4,25 +4,27 @@
 
 ## 一句话身份
 
-本仓库 = deepagents-in-action 课程的**个人学习 fork**（rg8diaoa/deepagents-in-action，上游 datawhalechina/deepagents-in-action）；架构 = **主仓保真（上游文件零修改）+ `learn/` 容器 + `workspace/`（agentseek 模板项目，待建）**。
+本仓库 = deepagents-in-action 课程的**个人学习 fork**（rg8diaoa/deepagents-in-action，上游 datawhalechina/deepagents-in-action）；架构 = **主仓保真（上游文件零修改）+ `learn/` 容器 + `workspace/`（agentseek 模板项目，已建并入库）**。
 
-## 当前任务（2026-09-15 交接）
+## 当前任务（2026-09-15 午后交接）
 
-**Task 0：准备篇（截止 2026-09-15 03:00）** —— AgentSeek CLI 安装 ✅（exe 坑已绕过）、`deepagents/default` 模板创建与跑通 ⏳、开发技能安装 ⏳。
+**Task 0 ✅ 全部落幕**（三提交已 push：fc0cc9a 建仓 / 3ba75e4 证据归档 / d4433c4 workspace 入库）。下一步：
+
+1. **Step 11 收尾**：精校学习笔记 [pre/notes/guides/Task0学习笔记.md](pre/notes/guides/Task0学习笔记.md)（AI 起草，🖊️ 标记段替换为自身体会；事实素材：[Task0坑位全盘查.md](pre/notes/research/Task0坑位全盘查.md)）
+2. **课程 Task 2（截止 09-18 03:00）**：读 ch01（Agent Harness）与 ch02（快速上手）；在 my_deepagent 改提示词/自定义工具触发第一次真实对话（本模板无聊天前端，交互方式看 ch02）；验收/优秀标准见 ch01、ch02 目录 stub
 
 | 事项 | 状态 | 说明 |
 |---|---|---|
-| fork + clone | ✅ | origin → rg8diaoa/deepagents-in-action |
-| learn/ 骨架 + AGENTS.md | ✅ | AGENTS.md 已本人审定生效；剩余步骤对照 learn/pre/notes/guides/Task0操作手册.md |
-| 环境探测 | ✅ | 见 AGENTS.md §3（python 3.12.10 / node v24.14.1 / uv 0.12.13） |
-| AgentSeek 安装 | ✅ | 0.1.4 已装；本人终端验证正常；0xC0000135 坑仅限沙箱内（沙箱内用 `learn/infra/agentseek.ps1` 绕过） |
-| Step 5-11（模板创建→跑通→技能） | ⏳ | **本人动手**：`agentseek create deepagents/default --checkout main --no-input` |
+| Task 0 全链路 | ✅ | clone→环境→AgentSeek→模板→doctor 全绿→网关 health 200 双确认→npx 双技能→workspace 入库（.env/.venv 已排除） |
+| 学习心得（Step 11） | ⏳ | 本人撰写；事实素材已备于 notes/research/ |
+| Task 1（待任务卡） | ⏳ | 截止与范围以任务卡为准，发布后更新 learn/README.md 映射表 |
 
 ## 必读（按序）
 
 1. [AGENTS.md](../AGENTS.md) — 人机协作宪法（分工/密钥/保真/环境坑）
 2. [learn/README.md](README.md) — 目录导航 + task 映射表
 3. 课程准备篇：pre01-agentseek-create / pre02-agentseek-skills
+4. Task 0 坑位全盘查：[pre/notes/research/Task0坑位全盘查.md](pre/notes/research/Task0坑位全盘查.md)（15 条实测坑与处置）
 
 ## 铁律（违者停手）
 
@@ -34,8 +36,8 @@
 
 ## 状态快照
 
-- Task 0 ✅ 核心完成（2026-09-15，Step 0-10）：doctor 全绿 + my_deepagent 网关 health 200 双确认 + npx skills 双技能装妥；Step 11 学习心得待本人撰写
-- 证据：`learn/pre/evidence/20260915_*.txt/png`（clone / env / agentseek / 骨架四组，成败均有）
+- 课程 Task 1（环境准备）✅ 完结 = 本仓内部 Task 0（fc0cc9a / 3ba75e4 / d4433c4 已 push，笔记已精校）｜ 课程 Task 2 ⏳ 09-18 03:00 ｜ 全课表见 learn/README.md 映射表（转录自课程表.xls，原件不入库）
+- 证据分层（定义见 AGENTS.md §6）：`evidence/` 26 个 = txt 正典 17（含 8 份截图转录）+ AI 渲染 png 9；本人截图 13 张为过程影像，统一 `notes/assets/`
 
 ## 更新约定
 
