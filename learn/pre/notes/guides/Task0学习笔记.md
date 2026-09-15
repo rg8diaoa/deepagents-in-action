@@ -16,7 +16,7 @@
 - 认知点（D3）：git 进度走 stderr，PowerShell 例行标红——**判断成败看 exit code，不看颜色**。
 - 其余证据：[txt 原文](../../evidence/20260915_step0_clone.txt)
 
-🖊️ 精校：frok上游可以更好同步上游仓库，且更好给上游提pr。
+🖊️ 精校：fork 上游可以更好同步上游仓库，且更好给上游提 PR。
 
 ## Step 1–2 · learn/ 骨架 + AGENTS.md ✅
 
@@ -27,7 +27,7 @@
 - 要点：`git diff origin/main --name-status` 输出为空 = 保真达标。
 - 其余证据：[txt 原文](../../evidence/20260915_step1-2_learn_skeleton.txt)
 
-🖊️ 精校：learn存放所有学习者有关的适配层、实验证据、测试、心得、排坑及其它有关的资料，保持课程主仓纯净，更好追溯（净室效应）；AGENTS.md可以gen'fAgent辅助学习（定人机协作规则，哪些可a代办，那些必须本人做，兼顾效率与效果）
+🖊️ 精校：learn 存放所有学习者有关的适配层、实验证据、测试、心得、排坑及其它有关的资料，保持课程主仓纯净，更好追溯（净室效应）；AGENTS.md 可以让 Agent 辅助学习（定人机协作规则，哪些可代办，哪些必须本人做，兼顾效率与效果）
 
 ## Step 3 · 环境探测 ✅
 
@@ -37,7 +37,7 @@
 
 - 其余证据：[txt 原文](../../evidence/20260915_step3_env_check.txt)
 
-🖊️ 精校：使用正确的环境运行，以免后续yun'xing遇到环境错误和版本不匹配的问题。
+🖊️ 精校：使用正确的环境运行，以免后续运行时遇到环境错误和版本不匹配的问题。
 
 ## Step 4 · 安装 AgentSeek CLI ✅（最曲折的一步）
 
@@ -104,7 +104,7 @@
 - 第三张图同框了两个坑：`GET / 404`（C2，路径前缀）与 `GET /agent/health 200`（正确路径）。
 - 其余证据（转录 txt）：[info/task](../../evidence/20260915_step8_info_tasklist.txt)｜[doctor fail](../../evidence/20260915_step8_doctor_fail_key.txt)｜[dev 404/200](../../evidence/20260915_step8_dev_up_health200.txt)
 
-🖊️ 精校：doctor全ok，dangentseek dev 居然报404，最后检查health联通正常（20），部18088下的“/”路径本身不同且没UI（纯后端），非配置问题。
+🖊️ 精校：doctor 全 ok，agentseek dev 居然报 404，最后检查 health 联通正常（200），是 18088 下的“/”路径本身没挂内容且没 UI（纯后端），非配置问题。
 
 ## Step 9 · 健康验证 ✅（Task 0 核心验证点）
 
@@ -117,7 +117,7 @@
 - 坑位：C2（根路径 404 是正常表现，别慌）。
 - 其余证据：[txt 探测记录](../../evidence/20260915_step9_gateway_health.txt)｜[browser 转录 txt](../../evidence/20260915_step9_health_browser.txt)
 
-🖊️ 精校：跟上一步de结果一致，因为不放心纯200提示，直接看浏览器并用Agent复核，确认服务zheng'chang。
+🖊️ 精校：跟上一步的结果一致，因为不放心纯 200 提示，直接看浏览器并用 Agent 复核，确认服务正常。
 
 ## Step 10 · 安装开发技能 ✅
 
@@ -132,7 +132,7 @@
 - 细节：skills CLI 会给出**安全评分**——langchain-dev-guide 为 Low Risk，langsmith-trace 为 **Snyk Med Risk**（装第三方技能包时值得看一眼）。
 - 其余证据：[langchain-dev-guide 安装](../assets/20260915_step10_langchain_guide_installed.png)｜[drift 排查 txt](../../evidence/20260915_step10_skills_command_drift.txt)｜[PNG](../../evidence/20260915_step10_skills_command_drift.png)｜[安装流程转录 txt](../../evidence/20260915_step10_skills_install.txt)
 
-🖊️ 精校：其实我本身不是特别关注这个安全ping'fen，因为是课程推荐的skill，但是我让Agent检查复核截图时发现有这个，关注了一下，以后自己使用时会核对一下，避开危险skill。
+🖊️ 精校：其实我本身不是特别关注这个安全评分，因为是课程推荐的skill，但是我让Agent检查复核截图时发现有这个，关注了一下，以后自己使用时会核对一下，避开危险skill。
 
 ## 收尾 · 归档与入库 ✅
 

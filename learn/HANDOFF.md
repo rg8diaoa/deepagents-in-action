@@ -8,16 +8,16 @@
 
 ## 当前任务（2026-09-15 午后交接）
 
-**Task 0 ✅ 全部落幕**（三提交已 push：fc0cc9a 建仓 / 3ba75e4 证据归档 / d4433c4 workspace 入库）。下一步：
+**Task 0 ✅ 全部落幕**（六提交已 push：fc0cc9a 建仓 / 3ba75e4 证据归档 / d4433c4 workspace 入库 / 8106b13 课表+chN骨架+证据分层+精校+§6 / 1599b5b 清理重复截图 / 本次引用勘误与分层定稿）。下一步：
 
-1. **Step 11 收尾**：精校学习笔记 [pre/notes/guides/Task0学习笔记.md](pre/notes/guides/Task0学习笔记.md)（AI 起草，🖊️ 标记段替换为自身体会；事实素材：[Task0坑位全盘查.md](pre/notes/research/Task0坑位全盘查.md)）
+1. **Step 11 已完成**：学习笔记已精校入库 [pre/notes/guides/Task0学习笔记.md](pre/notes/guides/Task0学习笔记.md)（🖊️ 段已全部替换为本人体会）
 2. **课程 Task 2（截止 09-18 03:00）**：读 ch01（Agent Harness）与 ch02（快速上手）；在 my_deepagent 改提示词/自定义工具触发第一次真实对话（本模板无聊天前端，交互方式看 ch02）；验收/优秀标准见 ch01、ch02 目录 stub
 
 | 事项 | 状态 | 说明 |
 |---|---|---|
 | Task 0 全链路 | ✅ | clone→环境→AgentSeek→模板→doctor 全绿→网关 health 200 双确认→npx 双技能→workspace 入库（.env/.venv 已排除） |
-| 学习心得（Step 11） | ⏳ | 本人撰写；事实素材已备于 notes/research/ |
-| Task 1（待任务卡） | ⏳ | 截止与范围以任务卡为准，发布后更新 learn/README.md 映射表 |
+| 学习心得（Step 11） | ✅ | 已精校入库（2026-09-15） |
+| 课程 Task 2（ch01 + ch02） | ⏳ | 09-18 03:00 截止；全课表见 learn/README.md 映射表 |
 
 ## 必读（按序）
 

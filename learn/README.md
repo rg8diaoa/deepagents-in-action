@@ -18,6 +18,30 @@
 | `infra/` | 公共设施（`agentseek.ps1` 沙箱绕过封装、`render_evidence.ps1` 证据截图渲染） |
 | `HANDOFF.md` | 会话交接文档（新会话 AI 协作者的最小完备上下文，随状态更新） |
 
+## 目录树（分级说明）
+
+```
+learn/
+├── .gitignore            # 屏蔽 *.xls/*.xlsx（课表原件不入库）
+├── 课程表.xls            # 课表原件（已忽略，内容转录至下方映射表）
+├── README.md             # 本文件：导航 + 课表映射 + 约定 + 目录树
+├── HANDOFF.md            # 会话交接文档（新会话 AI 先读）
+├── infra/                # 工具间：agentseek.ps1（沙箱封装）、render_evidence.ps1（txt→png 渲染）
+├── pre/                  # 准备篇档案袋 = 课程 Task 1（环境准备）
+│   ├── evidence/         #   证据层：txt 正典 17 + AI 渲染 png 9（副本可由 txt 重生成）
+│   └── notes/
+│       ├── guides/       #   操作/叙事轨：Task0学习笔记、Task0操作手册
+│       ├── research/     #   证据核对轨：Task0坑位全盘查
+│       └── assets/       #   影像层：本人截图 13 张（过程影像，非证据）
+├── ch01/ … ch09/         # 章节档案袋（按课表预建，结构同 pre/）
+│   ├── README.md         #   课表转录：任务/截止/模板/验收/优秀标准
+│   ├── evidence/         #   证据层（开章即填）
+│   └── notes/{guides,research,assets}/
+└── final/                # Task 8 综合项目 + 结营（同 chN 结构）
+```
+
+分层判据：**证据** = 实验本身的产物记录（AGENTS.md §6）；**影像** = 过程截图（不可重生成）；**guides/research** = 照着做 / 查证用。
+
 ## task ↔ 章节映射表（课程节奏）
 
 > 来源：`课程表.xls`（2026-09-14 开营，共 22 天，截止均为凌晨 03:00；原件不入库）。课程编号 Task 1 = 环境准备，与本仓早期文档的「Task 0」同指。
